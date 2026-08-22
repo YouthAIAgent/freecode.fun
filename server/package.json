@@ -1,5 +1,5 @@
 {
-  "name": "@freellmapi/server",
+  "name": "freecode-fun-server",
   "version": "0.2.1",
   "private": true,
   "type": "module",

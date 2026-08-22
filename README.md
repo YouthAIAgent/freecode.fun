@@ -1,6 +1,6 @@
 <div align="center">
 
-# FreeLLMAPI
+# Freecode.fun
 
 **4 billion tokens per month.  29 free LLM providers. 358 free model endpoints. One OpenAI-compatible endpoint.**
 
@@ -24,7 +24,7 @@ Aggregate free tiers from dozens of providers, plus custom OpenAI-compatible cha
   <a href="docs/install.md#docker-compose"><img src="repo-assets/badges/docker.svg" height="60" alt="Self-host with Docker"></a>
 </p>
 
-![FreeLLMAPI dashboard — Models page with the monthly token budget](repo-assets/github-hero.png)
+![Freecode.fun dashboard — Models page with the monthly token budget](repo-assets/github-hero.png)
 
 
 Your router updates its own model catalog from a signed feed: new free models, quota changes, and compatibility fixes land without a `git pull`.
@@ -59,9 +59,9 @@ Your router updates its own model catalog from a signed feed: new free models, q
 
 Every serious AI lab now offers a free tier, a few million tokens a month, a few thousand requests a day. On its own each tier is a toy. Stacked together, they add up to roughly **4 billion tokens per month** of working inference capacity, across **251 model families / 358 provider endpoints** from small-and-fast to reasonably capable.
 
-The problem is that stacking them by hand is painful: twenty-nine different SDKs, twenty-nine different rate limits, twenty-nine places a request can fail. FreeLLMAPI collapses that into one OpenAI-compatible endpoint. Point any OpenAI client library at your local server, and it routes transparently across whichever providers you've added keys for.
+The problem is that stacking them by hand is painful: twenty-nine different SDKs, twenty-nine different rate limits, twenty-nine places a request can fail. Freecode.fun collapses that into one OpenAI-compatible endpoint. Point any OpenAI client library at your local server, and it routes transparently across whichever providers you've added keys for.
 
-And the free-tier landscape shifts weekly: providers launch models, retire them, and change quotas without notice. FreeLLMAPI tracks all of that for you. The router pulls a signed model catalog from [freellmapi.co](https://freellmapi.co) on its own, so your install keeps up without a `git pull`. See [Premium (live catalog)](#premium-live-catalog) for how fast it keeps up.
+And the free-tier landscape shifts weekly: providers launch models, retire them, and change quotas without notice. Freecode.fun tracks all of that for you. The router pulls a signed model catalog from [freellmapi.co](https://freellmapi.co) on its own, so your install keeps up without a `git pull`. See [Premium (live catalog)](#premium-live-catalog) for how fast it keeps up.
 
 ![The free tier, stacked — ~4B tokens of free inference per month across 28 providers](repo-assets/free-tier.png)
 
@@ -186,7 +186,7 @@ Everything else — Docker Compose, local development, declarative startup confi
 
 A native menu-bar app lives in [`desktop/`](./desktop): the entire router + dashboard running locally from your tray, with a glass popover showing live request stats.
 
-![FreeLLMAPI desktop app](repo-assets/desktop.png)
+![Freecode.fun desktop app](repo-assets/desktop.png)
 
 **[Download from Releases](https://github.com/tashfeenahmed/freellmapi/releases/latest)** — the macOS `.dmg` and the Windows `.exe` installer are attached to every release. No account or password to set up: the only credential you need is the unified API key from the tray popover. Build-from-source steps and where your data lives: [docs/install.md](docs/install.md#desktop-app).
 
@@ -215,7 +215,7 @@ Every generator supports `--dry-run`, creates a timestamped backup before changi
 | Roo / Kilo / Crush | `setup-roo` / `setup-kilo` / `setup-crush` | `/v1` |
 | Cursor | `setup-cursor` guide | public `/v1` URL |
 
-FreeLLMAPI is local-first and single-user by design. Your provider keys stay in your SQLite database, encrypted at rest, and requests go from your machine to the upstream providers you enabled.
+Freecode.fun is local-first and single-user by design. Your provider keys stay in your SQLite database, encrypted at rest, and requests go from your machine to the upstream providers you enabled.
 
 ## Languages
 
@@ -445,7 +445,7 @@ Contributors very welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for the dev lo
 
 ## Disclaimer
 
-**This project is for personal experimentation and learning, not production.** Free tiers exist so developers can prototype against them; they aren't a stable, supported inference substrate and shouldn't be treated as one. If you build something real on top of FreeLLMAPI, swap in a paid API before you ship. Your relationship with each upstream provider is governed by the terms you accepted when you created your account — those terms still apply when the traffic is proxied through this project, and you're responsible for complying with them.
+**This project is for personal experimentation and learning, not production.** Free tiers exist so developers can prototype against them; they aren't a stable, supported inference substrate and shouldn't be treated as one. If you build something real on top of Freecode.fun, swap in a paid API before you ship. Your relationship with each upstream provider is governed by the terms you accepted when you created your account — those terms still apply when the traffic is proxied through this project, and you're responsible for complying with them.
 
 How each provider's ToS views a personal, single-user proxy — reviewed provider by provider in May 2026 — is in [docs/architecture.md#terms-of-service-review](docs/architecture.md#terms-of-service-review).
 

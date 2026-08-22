@@ -1,19 +1,19 @@
 {
-  "name": "freellmapi",
+  "name": "freecode.fun",
   "version": "0.4.0",
   "description": "Set up coding agents to use a FreeLLMAPI gateway",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tashfeenahmed/freellmapi.git",
+    "url": "git+https://github.com/tashfeenahmed/freecode.fun.git",
     "directory": "cli"
   },
-  "homepage": "https://github.com/tashfeenahmed/freellmapi/tree/main/cli#readme",
+  "homepage": "https://github.com/tashfeenahmed/freecode.fun/tree/main/cli#readme",
   "bugs": {
-    "url": "https://github.com/tashfeenahmed/freellmapi/issues"
+    "url": "https://github.com/tashfeenahmed/freecode.fun/issues"
   },
   "keywords": [
-    "freellmapi",
+    "freecode.fun",
     "llm",
     "openai-compatible",
     "claude-code",
@@ -25,7 +25,7 @@
   ],
   "type": "module",
   "bin": {
-    "freellmapi": "dist/index.js"
+    "freecode.fun": "dist/index.js"
   },
   "exports": {
     ".": "./dist/index.js",
