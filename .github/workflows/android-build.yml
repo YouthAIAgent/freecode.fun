@@ -26,12 +26,15 @@ jobs:
           build-tools: 34.0.0
           ndk: 25.1.8937393
           
+      - name: Install Gradle
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gradle
+          
       - name: Build Android APK
         working-directory: android
-        run: |
-          chmod +x gradlew 2>/dev/null || true
-          ./gradlew assembleDebug --no-daemon --stacktrace
-          
+        run: gradle assembleDebug --no-daemon --stacktrace
+        
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
